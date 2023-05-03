@@ -5,9 +5,9 @@ import 'app_module.dart';
 
 void main() {
   runApp(
-    ModularApp(
-      module: AppModule(),
-      child: const MyApp(),
+    RootRestorationScope(
+      restorationId: 'root',
+      child: ModularApp(module: AppModule(), child: const MyApp()),
     ),
   );
 }

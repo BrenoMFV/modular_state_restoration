@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
-      restorationScopeId: 'root',
     );
   }
 }

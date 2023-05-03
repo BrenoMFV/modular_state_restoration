@@ -55,6 +55,6 @@ class _CounterPageState extends State<CounterPage> with RestorationMixin {
 
   @override
   void restoreState(RestorationBucket? oldBucket, bool initialRestore) {
-    registerForRestoration(_counter, 'count');
+    registerForRestoration(_counter, 'counter_int');
   }
 }

@@ -7,10 +7,7 @@ import 'home_page.dart';
 class AppModule extends Module {
   @override
   List<ModularRoute> get routes => [
-        ChildRoute(
-          '/',
-          child: (_, __) => const HomePage(),
-        ),
+        ChildRoute('/', child: (_, __) => const HomePage()),
         ModuleRoute('/counter', module: CounterModule()),
       ];
 }
@@ -18,9 +15,6 @@ class AppModule extends Module {
 class CounterModule extends Module {
   @override
   List<ModularRoute> get routes => [
-        ChildRoute(
-          '/',
-          child: (_, args) => const CounterPage(),
-        ),
+        ChildRoute('/', child: (_, args) => const CounterPage()),
       ];
 }
