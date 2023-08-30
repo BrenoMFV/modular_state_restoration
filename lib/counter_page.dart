@@ -51,10 +51,10 @@ class _CounterPageState extends State<CounterPage> with RestorationMixin {
   }
 
   @override
-  String? get restorationId => 'counter_page';
+  String? get restorationId => 'counter-page';
 
   @override
   void restoreState(RestorationBucket? oldBucket, bool initialRestore) {
-    registerForRestoration(_counter, 'counter_int');
+    registerForRestoration(_counter, '_counter');
   }
 }

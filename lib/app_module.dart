@@ -15,6 +15,9 @@ class AppModule extends Module {
 class CounterModule extends Module {
   @override
   List<ModularRoute> get routes => [
-        ChildRoute('/', child: (_, args) => const CounterPage()),
+        ChildRoute(
+          '/',
+          child: (_, args) => const CounterPage(),
+        ),
       ];
 }
