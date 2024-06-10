@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Flutter Demo',
+      title: 'Modular Restoration Not Working Example',
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
       restorationScopeId: 'app',

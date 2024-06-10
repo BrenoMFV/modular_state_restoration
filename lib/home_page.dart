@@ -6,14 +6,17 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: double.infinity,
-      width: double.infinity,
-      color: Colors.white,
-      child: Center(
-        child: ElevatedButton(
-          child: const Text("Counter Page"),
-          onPressed: () => Modular.to.pushNamed('/counter/'),
+    return RestorationScope(
+      restorationId: 'home',
+      child: Container(
+        height: double.infinity,
+        width: double.infinity,
+        color: Colors.white,
+        child: Center(
+          child: ElevatedButton(
+            child: const Text("Counter Page"),
+            onPressed: () => Modular.to.pushNamed('/counter/'),
+          ),
         ),
       ),
     );

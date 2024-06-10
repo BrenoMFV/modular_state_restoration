@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class CounterPage extends StatefulWidget {
@@ -17,9 +18,7 @@ class _CounterPageState extends State<CounterPage> with RestorationMixin {
   }
 
   void _incrementCounter() {
-    setState(() {
       _counter.value++;
-    });
   }
 
   @override
@@ -35,9 +34,12 @@ class _CounterPageState extends State<CounterPage> with RestorationMixin {
             const Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '${_counter.value}',
-              style: Theme.of(context).textTheme.headlineMedium,
+            ListenableBuilder(listenable: _counter, builder: (context, child) {
+                return Text(
+                  '${_counter.value}',
+                  style: Theme.of(context).textTheme.headlineMedium,
+                );
+              }
             ),
           ],
         ),

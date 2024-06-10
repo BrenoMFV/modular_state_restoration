@@ -17,7 +17,8 @@ class CounterModule extends Module {
   List<ModularRoute> get routes => [
         ChildRoute(
           '/',
-          child: (_, args) => const CounterPage(),
+          child: (_, args) => const RestorationScope(
+              child: CounterPage(), restorationId: 'counter-page'),
         ),
       ];
 }
